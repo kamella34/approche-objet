@@ -5,12 +5,12 @@ import entites2.Personne;
 public class TestPersonne {
     public static void main(String[] args) {
 
-        AdressePostale adr1 = new AdressePostale(1,"1007 Mountain Drive",12345, "Gotham City");
-        AdressePostale adr2 = new AdressePostale(1,"344 Clinton Street",62960, "Metropolis");
+        AdressePostale adr1 = new AdressePostale(1," 1007 Mountain Drive ",12345, " Gotham City ");
+        AdressePostale adr2 = new AdressePostale(1," 344 Clinton Street ",62960, " Metropolis ");
 
-        Personne pers1 = new Personne("wayne","bruce",adr1);
-        Personne pers2 = new Personne("kent","clark",adr2);
-        Personne pers3 = new Personne("wonder", "women");
+        Personne pers1 = new Personne(" wayne "," bruce ",adr1);
+        Personne pers2 = new Personne(" kent "," clark ",adr2);
+        Personne pers3 = new Personne(" wonder ", " women ");
 
 /*
         pers1.adressePostale = new AdressePostale(1,"1007 Mountain Drive",12345, "Gotham City");
@@ -29,15 +29,16 @@ public class TestPersonne {
         pers2.adressePostale.codePostal = 62960;
         pers2.adressePostale.ville = "Metropolis";
 */
-
+        //instance de classe + methode d'instance
         pers1.upperCaseName();
-        pers1.nameModify("bat");
-        pers3.firstnameModify("alfred");
+        pers1.nameModify(" bat ");
+        pers3.firstnameModify(" alfred ");
         pers1.adresseModify(adr2);
+        pers1.upperCaseName();
 
-        System.out.println(pers1);
-        System.out.println(pers2);
-        System.out.println(pers3);
+        System.out.println("pers1 : "+pers1);
+        System.out.println("pers2 : "+pers2);
+        System.out.println("pers3 : "+pers3);
 
         String pers1Name = pers1.returnName();
         String pers1Firstname= pers1.firstnameReturn();
