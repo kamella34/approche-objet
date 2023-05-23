@@ -31,8 +31,9 @@ public class TestVilles {
 
         Villes maxVille = null;
         Villes minVille = null;
-
+        int count = 0;
         for (Villes value : listVilles) {
+            count++;
             if (habVille < value.getNbrHab()) {
                 habVille = value.getNbrHab();
                 maxVille = value;
@@ -43,15 +44,15 @@ public class TestVilles {
             }
             if (value.getNbrHab() > 100000) {
                 String villeMaj = value.getNom().toUpperCase();
-
-                System.out.println("Villes de plus de 100 000 Habitants " + villeMaj);
+                //System.out.println("Count: " + count);
+                listVilles.set(count -1,new Villes(villeMaj, value.getNbrHab()));
             }
 
         }
 
 
-        System.out.println("Ville qui possede le plus d'habitant: " + maxVille);
-        System.out.println("Ville qui possede le moins d'habitant: " + minVille);
+        System.out.println("Ville qui possede le plus d'habitants: " + maxVille );
+        System.out.println("Ville qui possede le moins d'habitants: " + minVille);
         listVilles.remove(minVille);
         System.out.println(listVilles);
 

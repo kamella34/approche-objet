@@ -14,7 +14,7 @@ public class Villes {
     @Override
     public String toString() {
         return
-                "Nombre d'habitants à " + nom + ": " + nbrHab + " " ;
+                "Ville de " + nom + ": " + nbrHab + " habitants " ;
     }
 
     public String getNom() {
