@@ -1,9 +1,9 @@
 package listes;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class TestVilles {
+
     public static void main(String[] args) {
         Villes v1 = new Villes("Nice", 343000);
         Villes v2 = new Villes("Carcassonne", 47800);
@@ -25,8 +25,8 @@ public class TestVilles {
         listVilles.add(v7);
         listVilles.add(v8);
 
-
-        int habVille = listVilles.get(0).getNbrHab();
+        int habVilleMin = listVilles.get(0).getNbrHab();
+        int habVilleMax = listVilles.get(0).getNbrHab();
         //System.out.println("maxHabVille : "+ maxHabVille);
 
         Villes maxVille = null;
@@ -34,12 +34,12 @@ public class TestVilles {
         int count = 0;
         for (Villes value : listVilles) {
             count++;
-            if (habVille < value.getNbrHab()) {
-                habVille = value.getNbrHab();
+            if (habVilleMax < value.getNbrHab()) {
+                habVilleMax = value.getNbrHab();
                 maxVille = value;
             }
-            if (habVille > value.getNbrHab()) {
-                habVille = value.getNbrHab();
+            if (habVilleMin > value.getNbrHab()) {
+                habVilleMin = value.getNbrHab();
                 minVille = value;
             }
             if (value.getNbrHab() > 100000) {
