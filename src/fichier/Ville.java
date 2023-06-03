@@ -6,11 +6,14 @@ public class Ville {
     String region;
     int population;
 
+
+
     public Ville(String nom, String codeDepartement, String region, int population) {
         this.nom = nom;
         this.codeDepartement = codeDepartement;
         this.region = region;
         this.population = population;
+
     }
 
     @Override
@@ -20,8 +23,11 @@ public class Ville {
                 ", codeDepartement=" + codeDepartement +
                 ", region='" + region + '\'' +
                 ", population=" + population +
+
                 '}';
     }
+
+
 
     public String getNom() {
         return nom;

@@ -1,14 +1,28 @@
 package listes;
 
-
+import fr.diginamic.testenumeration.EnumerationContinent;
 
 public class Villes implements Comparable<Villes> {
-    String nom;
-    Integer nbrHab;
+    private String nom;
+    private Integer nbrHab;
+    private EnumerationContinent continent;
 
+  
+    /**
+     *
+     * @param nom nom de la ville
+     * @param nbrHab nombre d'habitants
+     */
     public Villes(String nom, int nbrHab) {
         this.nom = nom;
         this.nbrHab = nbrHab;
+        this.continent = continent.INDETERMINE;
+    }
+
+    public Villes(String nom, int nbrHab, EnumerationContinent continent) {
+        this.nom = nom;
+        this.nbrHab = nbrHab;
+        this.continent = continent;
     }
    //Trier par nbr d'habitants
     public int compareTo(Villes autre) {
@@ -31,7 +45,19 @@ public class Villes implements Comparable<Villes> {
     @Override
     public String toString() {
         return
-                "Ville de " + nom + ": " + nbrHab + " habitants ";
+                "Ville de " + nom + ": " + nbrHab + " habitants, continent: "+ continent.getNomContinent();
+    }
+
+    public void setNbrHab(Integer nbrHab) {
+        this.nbrHab = nbrHab;
+    }
+
+    public EnumerationContinent getContinent() {
+        return continent;
+    }
+
+    public void setContinent(EnumerationContinent continent) {
+        this.continent = continent;
     }
 
     public String getNom() {
